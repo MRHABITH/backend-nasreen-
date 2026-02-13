@@ -1,0 +1,16 @@
+1.  Go to [dashboard.render.com](https://dashboard.render.com).
+2.  Click **New +** -> **Web Service**.
+3.  **Connect GitHub**: Select your repository.
+4.  **Fill in the Form**:
+    -   **Name**: `nasreen-backend` (or any name)
+    -   **Region**: Closest to you (e.g., Singapore, Oregon)
+    -   **Branch**: `main`
+    -   **Root Directory**: `backend` (Important! This tells Render where your requirements.txt is)
+    -   **Runtime**: Python 3
+    -   **Build Command**: `pip install -r requirements.txt`
+    -   **Start Command**: `uvicorn app.main:app --host 0.0.0.0 --port $PORT`
+5.  **Environment Variables** (Scroll down to "Advanced" or "Environment Variables"):
+    -   Key: `PYTHON_VERSION` | Value: `3.10.0`
+    -   Key: `HF_TOKEN` | Value: [(Paste your Hugging Face Token)](file:///c:/Users/Gen-AI%20Tech/OneDrive/Desktop/nasreen/frontend/src/lib/utils.js#4-7)
+    -   Key: `GROQ_API_KEY` | Value: [(Paste your Groq API Key)](file:///c:/Users/Gen-AI%20Tech/OneDrive/Desktop/nasreen/frontend/src/lib/utils.js#4-7)
+6.  **Instance Type**: Select "Free" (might be slow for ML) or "Starter" ($7/mo recommended for ML models).
